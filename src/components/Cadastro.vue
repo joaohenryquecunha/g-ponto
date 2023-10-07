@@ -54,7 +54,7 @@
           food: null,
           checked: []
         },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
+        foods: [{ text: 'Admin', value: null }, 'sim', 'não'],
         show: true
       }
     },
