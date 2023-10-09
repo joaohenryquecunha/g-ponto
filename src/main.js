@@ -8,6 +8,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { ModalPlugin } from 'bootstrap-vue'
 import { DropdownPlugin, TablePlugin } from 'bootstrap-vue'
 
+
 Vue.use(DropdownPlugin)
 Vue.use(TablePlugin)
 Vue.use(ModalPlugin)

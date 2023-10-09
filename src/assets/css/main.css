@@ -1,0 +1,19 @@
+
+:root{
+    --colorWhite: #fff;
+    --colorWhite-1: #E5E5E5;
+    --colorBlack: #000;
+    --colorGray: #F7F7F7;
+    --colorGray-1: #FAFAFA;
+    --colorGray-2: #8C8A97;
+    --colorGray-3: #81858E;
+    --colorDark: #000E1F;
+    --colorGreen: #24c504;
+    --colorGreenBG: rgba(7, 133, 34, 0.1);
+    --colorBorder: rgba(229, 229, 229, 0.93);
+    --colorRed: #ff1100;
+    --colorRedBG: rgba(158, 12, 2, 0.1);
+    --colorBoxShadow: rgba(0, 0, 0, 0.05);
+
+}
+
