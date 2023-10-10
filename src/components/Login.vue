@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="inputs">
-      <h1>teste</h1>
           <b-form-input
             id="input"
-            v-model="form.email"
             type="email"
             placeholder="Email"
             required
@@ -12,7 +10,6 @@
           <div class="inputs">
           <b-form-input
             id="input"
-            v-model="form.password"
             type="password"
             placeholder="Password"
             required

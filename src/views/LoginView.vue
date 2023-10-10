@@ -13,7 +13,7 @@ import Login from '@/components/Login.vue';
 export default {
   name: 'loginview',
   components: {
-    Login
+    Login,
   }
 }
 </script>
