@@ -76,6 +76,7 @@ export default {
         name: this.form.name,
         email: this.form.email,
         password: this.form.password
+        
       }),
     })
     .then(response => response.json())
