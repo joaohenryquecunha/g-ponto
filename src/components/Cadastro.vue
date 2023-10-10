@@ -32,7 +32,7 @@
           <b-form-select
             id="input"
             v-model="form.admin"
-            :options="admin"
+            :options="optionAdmin"
             required
           >
             <option disabled value="">administrador</option>
@@ -62,7 +62,7 @@ export default {
         password: "",
         admin: "",
       },
-      admin: ["não", "sim"],
+      optionAdmin: ["não", "sim"],
     };
   },
   methods: {
@@ -76,7 +76,7 @@ export default {
         name: this.form.name,
         email: this.form.email,
         password: this.form.password,
-        admin: this.admin
+        admin: this.form.admin
       }),
     })
     .then(response => response.json())
