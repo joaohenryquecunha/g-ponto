@@ -75,7 +75,8 @@ export default {
       body: JSON.stringify({
         name: this.form.name,
         email: this.form.email,
-        password: this.form.password
+        password: this.form.password,
+        admin: this.admin
       }),
     })
     .then(response => response.json())
