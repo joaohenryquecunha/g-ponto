@@ -15,7 +15,6 @@ export default {
   name: 'loginView',
   components: {
     Login,
-    
-}
+  }
 }
 </script>
