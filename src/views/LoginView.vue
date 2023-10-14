@@ -7,13 +7,15 @@
 
 
 <script>
-
 import Login from '@/components/Login.vue';
 
+
+
 export default {
-  name: 'loginview',
+  name: 'loginView',
   components: {
-    Login
-  }
+    Login,
+    
+}
 }
 </script>
