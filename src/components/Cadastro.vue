@@ -2,6 +2,9 @@
   <div class="container">
     <div class="container-cadastro">
       <b-form @submit.prevent="onSubmit">
+        <div class="text-forms">
+          <h3>CADASTRE-SE</h3>
+        </div>
         <div class="inputs">
           <b-form-input
             id="input"
@@ -92,30 +95,25 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2? family= Alfa+Slab+One & display=swap');
+
 .container {
   max-width: 1920px;
   height: 100vh;
   display: flex;
   text-align: center;
-  background-image: url("/src/assets/icons/Pontos.jpg");
-  background-size: cover;
+  background-color: #222;
+ 
+  
 }
-.container-cadastro {
-  margin: auto;
-  padding: 20px;
-  height: 50vh;
-  border: 1px solid white;
-  border-radius: 10px;
-}
+.text-forms{
+    color: var(--colorGray-2);
+    
+  }h3{
+    font-weight: 900;
+    font-family: 'Alfa Slab One', serif;;
+  }
 
-#input {
-  background: gainsboro;
-  border: 1px solid white;
-}
-.inputs {
-  color: black;
-  padding: 20px;
-  border-radius: 5px;
-}
+  
 </style>

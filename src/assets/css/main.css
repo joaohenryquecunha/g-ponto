@@ -14,6 +14,51 @@
     --colorRed: #ff1100;
     --colorRedBG: rgba(158, 12, 2, 0.1);
     --colorBoxShadow: rgba(0, 0, 0, 0.05);
+    --colorHover1:rgb(0, 255, 115);
+    --colorHover2:rgb(0, 255, 191);
+    --colorHover3:rgb(0, 255, 85);
 
 }
+@import url('https://fonts.googleapis.com/css2? family= Alfa+Slab+One & display=swap');
+
+.container-cadastro:hover {
+  box-shadow: 1px 1px 10px 5px  rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+  animation: changeColor 3s infinite alternate;
+}
+
+@keyframes changeColor {
+  0% {
+      box-shadow: 1px 1px 10px 5px  var(--colorHover1);
+  }
+  50% {
+      box-shadow: 1px 1px 10px 5px  var(--colorHover2);
+  }
+  100% {
+      box-shadow: 1px 1px 10px 5px  var(--colorHover3);
+  }
+}
+
+
+.container-cadastro {
+    margin: auto;
+    padding: 20px;
+    height: 50vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 5px  lightblue;
+    
+  }
+  
+  #input {
+    background: gainsboro;
+    border: 1px solid white;
+    
+  }
+  .inputs {
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
 

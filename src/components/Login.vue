@@ -1,23 +1,31 @@
 <template>
-  <div>
-    <h2>55555555</h2>
-    
-    <div class="inputs">
-          <b-form-input
-            id="input"
-            type="email"
-            placeholder="Email"
-            required
-          ></b-form-input>
+  <div class="container">
+    <div class="container-cadastro">
+      <div class="text-forms">
+          <h3>LOGIN</h3>
+        </div>
+      <div class="inputs">
+            <b-form-input
+              id="input"
+              type="email"
+              placeholder="Email"
+              required
+            ></b-form-input>  
+          </div>
+      <div class="inputs">
+           <b-form-input
+             id="input"
+             type="password"
+             placeholder="Password"
+             required
+           ></b-form-input>
+          </div>
           <div class="inputs">
-          <b-form-input
-            id="input"
-            type="password"
-            placeholder="Password"
-            required
-          ></b-form-input>
+          <b-button class="button-cadastro" type="submit"  variant="danger"
+            >Login</b-button
+          >
         </div>
-        </div>
+    </div>
   </div>
 </template>
 
@@ -57,29 +65,22 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2? family= Alfa+Slab+One & display=swap');
+
 .container {
   max-width: 1920px;
   height: 100vh;
   display: flex;
   text-align: center;
-  background-image: url("/src/assets/icons/Pontos.jpg");
-  background-size: cover;
-}
-.container-cadastro {
-  margin: auto;
-  padding: 20px;
-  height: 50vh;
-  border: 1px solid white;
-  border-radius: 10px;
+  background-color: #222;
+  
 }
 
-#input {
-  background: gainsboro;
-  border: 1px solid white;
-}
-.inputs {
-  color: black;
-  padding: 20px;
-  border-radius: 5px;
-}
+.text-forms{
+    color: var(--colorGray-2);
+    
+  }h3{
+    font-weight: 900;
+    font-family: 'Alfa Slab One', serif;;
+  }
 </style>
