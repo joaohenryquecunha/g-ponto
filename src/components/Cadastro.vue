@@ -1,6 +1,11 @@
 <template>
-  <div class="container">
-    <div class="container-cadastro">
+  <div class="container d-flex">
+     
+    
+    <div class="container-cadastro d-flex">
+      <div class="img-login">
+      <img src="../assets/icons/gponto1.jpeg" alt="gponto" style="width: auto; height: auto;">
+    </div>
       <b-form @submit.prevent="onSubmit">
         <div class="text-forms">
           <h3>CADASTRE-SE</h3>
@@ -114,6 +119,10 @@ export default {
     font-weight: 900;
     font-family: 'Alfa Slab One', serif;;
   }
+
+.img-login {
+  
+}
 
   
 </style>
