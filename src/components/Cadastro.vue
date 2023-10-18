@@ -4,7 +4,21 @@
     
     <div class="container-cadastro d-flex">
       <div class="img-login">
-      <img src="../assets/icons/gponto1.jpeg" alt="gponto" style="width: auto; height: auto;">
+      <img src="../assets/icons/gponto1.jpeg" alt="gponto">
+      <div class="d-flex link-login">
+        <div>
+          <p class="p-login">Já possui uma conta?</p>
+        </div>
+        <div>
+          <RouterLink 
+          to="login">
+          <button>
+            Fazer Login
+          </button>
+        </RouterLink>
+
+        </div>
+      </div>
     </div>
       <b-form @submit.prevent="onSubmit">
         <div class="text-forms">
@@ -47,7 +61,7 @@
           </b-form-select>
         </div>
         <div class="inputs">
-          <b-button class="button-cadastro" type="submit"  variant="danger"
+          <b-button class="button-cadastro" type="submit"  
             >Cadastrar</b-button
           >
         </div>
@@ -60,43 +74,44 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
-  name: "Cadastro",
-  data() {
-    return {
-      form: {
-        email: "",
-        name: "",
-        password: "",
-        admin: "",
-      },
-      optionAdmin: ["não", "sim"],
-    };
-  },
-  methods: {
-    onSubmit() {
-    fetch('http://localhost:8000/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: this.form.name,
-        email: this.form.email,
-        password: this.form.password,
-        admin: this.form.admin
-      }),
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('usuario criado',data);
-    }).catch(error => {
-      console.error('erro ao criar');
-    });
+    name: "Cadastro",
+    data() {
+        return {
+            form: {
+                email: "",
+                name: "",
+                password: "",
+                admin: "",
+            },
+            optionAdmin: ["não", "sim"],
+        };
     },
-
-
-  },
+    methods: {
+        onSubmit() {
+            fetch('http://localhost:8000/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: this.form.name,
+                    email: this.form.email,
+                    password: this.form.password,
+                    admin: this.form.admin
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                console.log('usuario criado', data);
+            }).catch(error => {
+                console.error('erro ao criar');
+            });
+        },
+    },
+    components: { RouterLink }
 };
 </script>
 
@@ -117,12 +132,65 @@ export default {
     
   }h3{
     font-weight: 900;
-    font-family: 'Alfa Slab One', serif;;
+    font-family: 'Alfa Slab One', serif;
   }
 
 .img-login {
-  
+  width: 400px;
+  height: 100%;
+  border: 1px solid aliceblue;
+  border-radius: 25px 25px;
+  img{
+    width: 100%;
+    height: 50%;
+    border-radius: 25px 25px 5px 5px;
+    object-fit:cover;
+    
+  }
 }
+
+.button-cadastro {
+  color: #000;
+  background:linear-gradient(180deg, #00ff88,#028065);
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 1px 5px 0px  lightblue;
+}
+.button-cadastro:hover {
+  color: #000;
+  background:linear-gradient(90deg, #00ffc8,#00fc93);
+  padding: 8px 18px;
+  font-size: 18px;
+}
+
+.link-login {
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 10px;
+  padding: 40px;
+  p{
+    color: #fff;
+    margin: auto;
+  }
+  button{
+    font-family: 'Alfa Slab One', serif;
+  background:linear-gradient(180deg, #00ff88,#028065);
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 1px 5px 0px  lightblue;
+  border-radius: 10%;
+  }
+  button:hover{
+  background:linear-gradient(90deg, #00ffc8,#00fc93);
+  padding: 4px 8px;
+  font-size: 18px;
+  }
+}
+
+
+
 
   
 </style>
