@@ -105,9 +105,13 @@ export default {
             })
                 .then(response => response.json())
                 .then(data => {
-                console.log('usuario criado', data);
-            }).catch(error => {
-                console.error('erro ao criar');
+                alert('usuario criado', data);
+                this.form.name = "";
+                this.form.email = "";
+                this.form.password = "";
+                this.form.admin = "";
+              }).catch(error => {
+               alert('erro', error);
             });
         },
     },
